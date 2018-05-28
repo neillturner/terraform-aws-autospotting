@@ -85,7 +85,7 @@ variable "autospotting_spot_product_description" {
 # Lambda configuration
 variable "lambda_zipname" {
   description = "Name of the archive"
-  default     = "${path.module}/package/autospotting.zip"
+  default     = "package/autospotting.zip"
 }
 
 variable "lambda_s3_bucket" {

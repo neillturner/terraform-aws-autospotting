@@ -2,8 +2,8 @@ resource "aws_lambda_function" "autospotting" {
   count = "${var.lambda_s3_bucket == "" ? 1 : 0}"
 
   function_name    = "autospotting"
-  filename         = "${var.lambda_zipname}"
-  source_code_hash = "${base64sha256(file("${var.lambda_zipname}"))}"
+  filename         = "${path.module}/${var.lambda_zipname}"
+  source_code_hash = "${base64sha256(file("${path.module}/${var.lambda_zipname}"))}"
   role             = "${var.lambda_role_arn}"
   runtime          = "${var.lambda_runtime}"
   timeout          = "${var.lambda_timeout}"
