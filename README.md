@@ -4,11 +4,11 @@ Automatically convert your existing AutoScaling groups to significantly cheaper 
 
 See [https://github.com/cristim/autospotting](https://github.com/cristim/autospotting) for details.
 
-To access from terraform: 
+To access from terraform:
 
 ```
 module "autospotting" {
-  source  = "neillturner/autospotting/aws"
-  version = "0.0.8"
+  source  = "cristim/autospotting/aws"
+  version = "0.0.9"
 }
 ```
